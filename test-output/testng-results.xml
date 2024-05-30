@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-30T08:56:23 IST" name="Suite" finished-at="2024-05-30T08:56:38 IST" duration-ms="14901">
+  <suite started-at="2024-05-30T09:13:30 IST" name="Suite" finished-at="2024-05-30T09:13:59 IST" duration-ms="28823">
     <groups>
     </groups>
-    <test started-at="2024-05-30T08:56:23 IST" name="Error Validation Test" finished-at="2024-05-30T08:56:38 IST" duration-ms="14901">
-      <class name="com.adarsh.tests.ErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.adarsh.tests.ErrorValidations@194fad1]" started-at="2024-05-30T08:56:23 IST" name="launchApplication" finished-at="2024-05-30T08:56:34 IST" duration-ms="11362" status="PASS">
+    <test started-at="2024-05-30T09:13:30 IST" name="Submit Order Test" finished-at="2024-05-30T09:13:59 IST" duration-ms="28823">
+      <class name="com.adarsh.tests.PlaceOrder">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.adarsh.tests.PlaceOrder@14fc5f04]" started-at="2024-05-30T09:13:31 IST" name="launchApplication" finished-at="2024-05-30T09:13:41 IST" duration-ms="10103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="errorHandling()[pri:0, instance:com.adarsh.tests.ErrorValidations@194fad1]" started-at="2024-05-30T08:56:34 IST" name="errorHandling" finished-at="2024-05-30T08:56:35 IST" duration-ms="776" status="PASS">
+        <test-method signature="purchaseOrder(java.util.HashMap)[pri:0, instance:com.adarsh.tests.PlaceOrder@14fc5f04]" started-at="2024-05-30T09:13:41 IST" name="purchaseOrder" data-provider="getData" finished-at="2024-05-30T09:13:46 IST" duration-ms="5273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{cvvNumber=123, loginUserEmail=rajadarsh711@gmail.com, loginUserPassword=Qwerty12345@, countryName=India, nameOnCard=Adarsh Raj, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- errorHandling -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.adarsh.tests.ErrorValidations@194fad1]" started-at="2024-05-30T08:56:35 IST" name="closeApplication" finished-at="2024-05-30T08:56:38 IST" duration-ms="2276" status="PASS">
+        </test-method> <!-- purchaseOrder -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.adarsh.tests.PlaceOrder@14fc5f04]" started-at="2024-05-30T09:13:46 IST" name="closeApplication" finished-at="2024-05-30T09:13:48 IST" duration-ms="1806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- com.adarsh.tests.ErrorValidations -->
-    </test> <!-- Error Validation Test -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.adarsh.tests.PlaceOrder@14fc5f04]" started-at="2024-05-30T09:13:48 IST" name="launchApplication" finished-at="2024-05-30T09:13:56 IST" duration-ms="7979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="viewOrderHistory(java.util.HashMap)[pri:0, instance:com.adarsh.tests.PlaceOrder@14fc5f04]" started-at="2024-05-30T09:13:56 IST" name="viewOrderHistory" data-provider="getData" finished-at="2024-05-30T09:13:57 IST" depends-on-methods="com.adarsh.tests.PlaceOrder.purchaseOrder" duration-ms="1084" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{cvvNumber=123, loginUserEmail=rajadarsh711@gmail.com, loginUserPassword=Qwerty12345@, countryName=India, nameOnCard=Adarsh Raj, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewOrderHistory -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:com.adarsh.tests.PlaceOrder@14fc5f04]" started-at="2024-05-30T09:13:57 IST" name="closeApplication" finished-at="2024-05-30T09:13:59 IST" duration-ms="1803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- com.adarsh.tests.PlaceOrder -->
+    </test> <!-- Submit Order Test -->
   </suite> <!-- Suite -->
 </testng-results>
